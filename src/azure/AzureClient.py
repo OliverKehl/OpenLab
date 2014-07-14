@@ -10,9 +10,12 @@ def connect(hostname,port=22,username=None,password=None):
         print 'Error Connecting: '+str(e)
 
 def test():
-    client = connect('42.159.226.119',22,'kangjihua','oliverkahnno.1');
-    output = client.exec_command('uname -a')
-    print output[1].read()
+    client = connect('kangjihua.chinacloudapp.cn',22,'kangjihua','oliverkahnno.1');
+    stdin,stdout,stderr = client.exec_command('sudo find / -name \.vnc')
+    #stdin.write('oliverkahnno.1\n')
+    #stdin.flush()
+    print stdout.read()
+    print stderr.read()
     client.close()
     
 if __name__=='__main__':
