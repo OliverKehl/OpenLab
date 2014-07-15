@@ -1,5 +1,4 @@
-import web
-import json
+import web,json
 
 urls = ('/(.*)', 'index')
 class index:
