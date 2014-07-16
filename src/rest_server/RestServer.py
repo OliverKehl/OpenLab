@@ -27,7 +27,7 @@ class RestServer():
         
 
 def connect(hostname,port=22,username=None,password=None):
-    
+    pass
 
 def test():
     client = connect('kangjihua.chinacloudapp.cn',22,'kangjihua','oliverkahnno.1');
